@@ -3,7 +3,7 @@ require 'pry'
 class Triangle
   attr_accessor :triangle_sides
   
-  @triangle_sides = []
+  @triangle_sides = [@a, @b, @c]
   
   def initialize(a, b, c)
     @a = a 
