@@ -20,6 +20,7 @@ class Triangle
 
   def is_each_side_greater_than_zero?
     #write code here 
+    if a > 0 && b> 0 && c > 0
     binding.pry
     
   end 
