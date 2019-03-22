@@ -29,7 +29,7 @@ class Triangle
   
 
   def kind
-    @triangle_sides = [a, b, c].sort
+    @triangle_sides.sort
 
     triangle_sides[0] = a 
     triangle_sides[1] = b  
