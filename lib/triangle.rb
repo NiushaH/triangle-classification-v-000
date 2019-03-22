@@ -22,7 +22,8 @@ class Triangle
     #write code here 
     if @triangle_sides.any? {|side| side <= 0}
         raise TriangleError
-    elsif @sides[0] + @sides[1] <= @sides[2]
+    elsif a + b + C
+    # @sides[0] + @sides[1] <= @sides[2]
         raise TriangleError
     end
   end 
