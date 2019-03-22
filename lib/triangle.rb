@@ -20,9 +20,11 @@ class Triangle
 
   def is_each_side_greater_than_zero?
     #write code here 
-    @triangle_sides.any? {|side| side <= 0}
-    binding.pry
-    
+    if @triangle_sides.any? {|side| side <= 0}
+        raise TriangleError
+    elsif @sides[0] + @sides[1] <= @sides[2]
+        raise TriangleError
+    end
   end 
   
 
