@@ -28,7 +28,13 @@ class Triangle
   end 
   
 
-  def kind(triangle_sides)
+  def kind
+    self.triangle_sides
+    triangle_sides[0] = a 
+    triangle_sides[1] = b  
+    triangle_sides[2] = c  
+    
+    
     if (( a == b ) && ( a == c ))
       return :equilateral
       
