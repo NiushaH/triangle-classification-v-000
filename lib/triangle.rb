@@ -9,39 +9,19 @@ class Triangle
     @a = a 
     @b = b 
     @c = c 
-    #each side must be > 0
-
-    is_each_side_greater_than_zero?
   end
 
-  def is_each_side_greater_than_zero?
-    #write code here 
-    is_each_side_greater_than_zero?
-      if @a <= 0 || @b <= 0 || @c <= 0 
-        raise TriangleError
-      elsif @a + @b <= @c 
-        raise TriangleError
-  end 
-  
 
   def kind
-    @triangle_sides = [a, b, c].sort 
-
-    triangle_sides[0] = a 
-    triangle_sides[1] = b  
-    triangle_sides[2] = c  
-    
-    
-    if (( a == b ) && ( a == c ))
+    if @a<=0 || @b<=0 || @c<=0 || @a+@b <= @c || @a+@c <= @b || @b+@c <= @a
+      raise TriangleError 
+    elsif @a==@b && @b==@c 
       return :equilateral
-      
-      elsif (( a == c ) || ( b == c ))
-  	    return :isosceles
-        
-      else
-        return :scalene
+    elsif @a==@b || @b==@c || @a==@c
+      return :isosceles
+    elsif @a!=@b && @b!=@c && @a!=@c
+      return :scalene 
     end
-
   end
 
   # Error class used in part 2.  No need to change this code.
