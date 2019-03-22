@@ -28,8 +28,8 @@ class Triangle
   end 
   
 
-  def kind
-    @triangle_sides = [].sort 
+  def kind(triangle_sides = [a, b, c])
+    @triangle_sides = [a, b, c].sort 
 
     triangle_sides[0] = a 
     triangle_sides[1] = b  
