@@ -12,23 +12,19 @@ class Triangle
     #each side must be > 0
 
     is_each_side_greater_than_zero?
-      if @a <= 0 || @b <= 0 || @c <= 0 
-        raise TriangleError
-      elsif @a + @b <= @c 
-        raise TriangleError
   end
 
   def is_each_side_greater_than_zero?
     #write code here 
-    if @triangle_sides.any? {|side| side <= 0}
+    is_each_side_greater_than_zero?
+      if @a <= 0 || @b <= 0 || @c <= 0 
         raise TriangleError
-    elsif @triangle_sides[0] + @triangle_sides[1] <= @triangle_sides[2]
+      elsif @a + @b <= @c 
         raise TriangleError
-    end
   end 
   
 
-  def kind(triangle_sides = [a, b, c])
+  def kind
     @triangle_sides = [a, b, c].sort 
 
     triangle_sides[0] = a 
