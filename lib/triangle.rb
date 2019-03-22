@@ -5,17 +5,17 @@ class Triangle
   
   @triangle_sides = []
   
-  def initialize(triangle_sides = [a, b, c])
-    @triangle_sides = [a, b, c].sort
-    
+  def initialize(a, b, c)
+    @a = a 
+    @b = b 
+    @c = c 
     #each side must be > 0
+
     is_each_side_greater_than_zero?
-    
-    #if less than 3 sides entered, then raise TriangleError
-    #NOT SURE HOW TO CODE THIS
-    
-      # raise TriangleError
-    
+      if @a <= 0 || @b <= 0 || @c <= 0 
+        raise TriangleError
+      elsif @a + @b <= @c 
+        raise TriangleError
   end
 
   def is_each_side_greater_than_zero?
