@@ -29,8 +29,6 @@ class Triangle
   
 
   def kind(triangle_sides)
-  
-      
     if (( a == b ) && ( a == c ))
       return :equilateral
       
