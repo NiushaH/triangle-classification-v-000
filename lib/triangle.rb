@@ -1,3 +1,5 @@
+require 'pry'
+
 class Triangle
   attr_accessor :triangle_sides
   
@@ -18,6 +20,7 @@ class Triangle
 
   def is_each_side_greater_than_zero?
     #write code here 
+    binding.pry
     
   end 
   
