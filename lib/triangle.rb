@@ -6,7 +6,7 @@ class Triangle
   @triangle_sides = []
   
   def initialize(triangle_sides = [a, b, c])
-    @triangle_sides = triangle_sides.sort
+    @triangle_sides = [a, b, c].sort
     
     #each side must be > 0
     is_each_side_greater_than_zero?
